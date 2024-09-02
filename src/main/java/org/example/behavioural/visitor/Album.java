@@ -1,0 +1,33 @@
+package org.example.behavioural.visitor;
+
+public class Album implements Music {
+
+    private String title;
+    private String artist;
+
+    public Album(String title, String artist) {
+        this.title = title;
+        this.artist = artist;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
+
+    @Override
+    public String accept(Visitor visitor) {
+        return visitor.exhibit(this);
+    }
+}
