@@ -2,7 +2,7 @@ package org.example.behavioural.visitor;
 
 public class MusicMuseum implements Visitor {
 
-    private static MusicMuseum instance = new MusicMuseum();
+    private static final MusicMuseum instance = new MusicMuseum();
 
     private MusicMuseum() {}
 

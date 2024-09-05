@@ -1,20 +1,14 @@
 ```mermaid
 classDiagram
-    TaskManager --|> Task
-    TaskManager --|> NotificationService
-    User --|> Task
-    User --|> TaskManager
-    NotificationService --|> Task
+    class Customer
+    class Support
+    class CustomerService
+    class Manager
+    class Department
 
-    class Task {
-    }
+    Customer --> CustomerService
+    Manager --> CustomerService
+    Support --> CustomerService
+    Department <|.. Support
 
-    class User {
-    }
-
-    class TaskManager {
-    }
-
-    class NotificationService {
-    }
 ```
